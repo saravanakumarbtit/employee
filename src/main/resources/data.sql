@@ -1,0 +1,2 @@
+INSERT INTO EMPLOYEE (id, name, role, address, salary) VALUES(1, 'SARAVANAN', 'SSE','CHENNAI',10000);
+INSERT INTO EMPLOYEE (id, name, role, address, salary) VALUES(2, 'BALAKUMAR','CEO','HYDRABAD',20000);
