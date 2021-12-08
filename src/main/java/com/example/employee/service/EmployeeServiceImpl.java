@@ -55,15 +55,15 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	@Override
 	public Employee save(EmployeeVo employee) {
-			Employee updateRecord = new Employee();
-			updateRecord.setName(employee.getName());
-			updateRecord.setAddress(employee.getAddress());
-			updateRecord.setRole(employee.getRole());
-			updateRecord.setSalary(employee.getSalary());
+			Employee saveRecord = new Employee();
+			saveRecord.setName(employee.getName());
+			saveRecord.setAddress(employee.getAddress());
+			saveRecord.setRole(employee.getRole());
+			saveRecord.setSalary(employee.getSalary());
 			if(employee.getId() != null) {
 				boolean recordFound = employeeRepository.existsById(employee.getId());
-				return recordFound ? null : employeeRepository.save(updateRecord); 
+				return recordFound ? null : employeeRepository.save(saveRecord); 
 			}
-			return employeeRepository.save(updateRecord);
+			return employeeRepository.save(saveRecord);
 	}
 }
